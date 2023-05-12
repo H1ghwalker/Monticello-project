@@ -1,0 +1,230 @@
+// Первый слайдер ------------------------------------------------------------------------------------------------------
+.banner__slider {
+    position: relative;
+}
+
+.banner__slider .slide {
+    background-image: linear-gradient(rgba(126, 90, 225, 0.9), rgba(85, 183, 255, 0.9)), url('../img/slide-1.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.banner__slider .slide_two {
+    background-image: linear-gradient(rgba(126, 90, 225, 0.9), rgba(85, 183, 255, 0.9)), url('../img/slide-2.jpg');
+}
+
+.banner__slider .slide_three {
+    background-image: linear-gradient(rgba(126, 90, 225, 0.9), rgba(85, 183, 255, 0.9)), url('../img/slide-3.jpg');
+}
+
+.banner__slider .slide_four {
+    background-image: linear-gradient(rgba(126, 90, 225, 0.9), rgba(85, 183, 255, 0.9)), url('../img/slide-4.jpg');
+}
+
+.banner__slider .slide_five {
+    background-image: linear-gradient(rgba(126, 90, 225, 0.9), rgba(85, 183, 255, 0.9)), url('../img/slide-5.jpg');
+}
+
+.slide {
+    position: relative;
+}
+
+.banner__slider>.slick-dots {
+    @media (max-width: 1245px) {
+        left: 90%;
+        
+    }
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    top: 35%;
+    left: 95%;
+
+
+    li {
+        &.slick-active {
+            button {
+                background-color: antiquewhite;
+            }
+        }
+    }
+
+    button {
+        font-size: 0;
+        background: transparent;
+        border: 2px solid #ffddff;
+        width: 14px;
+        height: 14px;
+        padding: 0;
+        border-radius: 50%;
+    }
+}
+
+
+.banner__title,
+.banner__subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.banner__title {
+    font-family: 'Montserrat', serif;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 20px 0;
+}
+
+.banner__subtitle {
+    font-family: 'Montserrat', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+
+.banner__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// ----------------------------------------------------------------------------------------------------------------------
+// Второй слайдер 
+
+
+.news__slider {
+    padding: 80px 0 0 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.news__item {
+    background: #fff;
+    width: 370px;
+    height: 510px;
+    margin: 15px;
+}
+
+.news__img {
+    img {
+        // width: 100%;
+        height: 100%;
+        max-width: 370px;
+    }
+}
+
+.news__title{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    &::before{
+        @extend %line;
+        background-color: #fff;
+    }
+}
+
+.news__content{
+    padding: 20px;
+}
+
+.news__text{
+    font-family: 'Open Sans', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2C4058;
+}
+
+.authors{
+    display: flex;
+    padding-top: 45px;
+
+    &__img{
+        padding-right: 20px;
+
+        img{
+            border-radius: 50%;
+        }
+    }
+
+    &__info{
+        align-self: center;
+    }
+
+    &__name{
+        font-family: 'Montserrat', serif;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .date{
+        font-family: 'Montserrat', serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #55B7FF;
+    }
+}
+
+
+.news__slider >.slick-dots {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: absolute;
+    bottom: -10%;
+
+
+    li {
+        &.slick-active {
+            button {
+                background-color: antiquewhite;
+            }
+        }
+    }
+
+    button {
+        font-size: 0;
+        background: transparent;
+        border: 2px solid #ffddff;
+        width: 14px;
+        height: 14px;
+        padding: 0;
+        border-radius: 50%;
+    }
+}
+
+.news__slider >.slick-prev{
+    left: -70px;
+    background: url('../img/svg/Left.svg') 0 0 no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 0;
+    transform: translate(0, 50%);
+}
+
+.news__slider >.slick-next{
+    right: -70px;
+    background: url('../img/svg/Right.svg') 0 0 no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 0;
+    transform: translate(0, 50%);
+}

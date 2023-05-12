@@ -1,0 +1,20 @@
+.socials__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.socials__link>.icon {
+    width: 40px;
+    height: 40px;
+    fill: white;
+    transition: all 0.2s linear;
+}
+
+
+.socials__link>svg:hover {
+    transform: scale(1.3);
+}
